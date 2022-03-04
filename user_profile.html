@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/index-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header class="py-3 mb-3 border-bottom bg-light">
+      <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+        <div class="dropdown">
+          <a href="./index.html" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none ">
+            <img src="./img/logo-icon.png" width="60" alt="">
+          </a>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <form class="w-100 me-3">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+          </form>
+          <div class="d-flex">
+            <a href="./login.html" class="btn btn-light border m-1">Giriş</a>
+            <a href="./customer_registration.html" class="btn btn-light border m-1">Müştəri qeydiyyatı</a>
+            <a href="./seller_registration.html" class="btn btn-light border m-1">Satıcı qeydiyyatı</a>
+            <a href="./user_profile.html" class=" ">
+              <img src="./img/profile-icon.png" class="border border-primary rounded-circle" width="60" alt="">
+            </a>
+          </div>
+          <div class="flex-shrink-0 dropdown" style="display: none;">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="true">
+              <img src="./img/profile-icon.png" alt="mdo" width="32" height="32" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
+              <li><a class="dropdown-item" href="#">Card...</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      
+      <div class="row m-3">
+
+        <div class="col-4">
+            <img src="./img/profile-icon.png" style="width: 220px;" class="border" alt="">
+        </div>
+
+        <div class="col-6">
+            <div class="row" style="font-size: xx-large;"><p>Satıcı</p></div>
+            <div class="row" style="font-size: xx-large"><p>Rzayev</p></div>
+            <div class="row" style="font-size: xx-large"><p>seller@gmail.com</p></div>
+            <div class="row" style="font-size: xx-large"><p>seller-username</p></div>
+            <div class="row" style="font-size: xx-large"><p>055-555-55-51</p></div>
+            <div class="row" style="font-size: xx-large"><p>Baku</p></div>
+        </div>
+
+        <div class="col-2">
+            <a href="#"><img src="./img/edit-icon.png" style="width: 40px;" alt=""></a>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="./js/constants.js"></script> 
+
+    <script src="./styles/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <!-- <script>
+
+      document.addEventListener("DOMContentLoaded", function(){
+         
+        var url = ipAddress.ip+'/api/product';
+        var productList = document.getElementById("product-list");
+
+        $.ajax({
+        type: 'GET',
+        url: url,
+        dataType:'json',
+        success:function(data, textStatus, jqXHR){
+          console.log(data);
+          $.each(data, function(index, item){
+            // $.each(item, function(key, value){
+              $('#product-list').append(
+                `
+                <div class="row border mb-2 p-4">
+                  <div class="col-2">
+                    <img src="https://oldnavy.gap.com/Asset_Archive/ONWeb/content/0028/281/550/assets/211225_52-M6099_B_DP_PJs.jpg" style="height: 200px;" alt="">
+                  </div>
+                  <div class="col-1"></div>
+                  <div class="col-9">
+                    <p id=`+item["id"]+`" class="product-name" style="font-weight: bold; font-size: x-large">`+ item["name"] +`</p>
+                    <p class="product-details" style="font-size: large">` + item["details"] + ` </p>
+                    <p style="font-size: larger; color: #4287f5">` + item["cost"] + `$</p>
+                  </div>
+                </div>
+                `
+              );
+            // });
+          });
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown){
+          console.log("Yükləyə bilmədi")
+        }
+      });
+
+      });
+
+    </script> -->
+
+  </body>
+</html>
