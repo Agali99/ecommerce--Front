@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+  rel="stylesheet" 
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+  crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles/login-style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  
+  <div class="container">
+    <h1>Multipart File Upload</h1>
+    <form id="form" enctype="multipart/form-data">
+      <div class="input-group">
+        <label for="file">Select files</label>
+        <input id="file" type="file" name="file" accept="image/png" />
+      </div>
+      <button class="submit-btn" type="submit">Upload</button>
+    </form>
+  </div>
+
+  <img src="http://localhost:8080/api/user/get-profile-picture/tural">
+
+  <script type="text/javascript" src="./js/constants.js"></script> 
+
+  <script type="text/javascript">
+    
+    var url = ipAddress.ip + '/api/upload';
+    
+    const form = document.getElementById("form");
+    const inputFile = document.getElementById("file");
+
+    const formData = new FormData();
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+
+      for (const file of inputFile.files) {
+        if(!isFileImage(file)){
+          alert("Seçilmiş fayl şəkil formatında olmalıdır!");
+          window.location.reload();
+        }  
+        formData.append("files", file);
+      }
+
+      fetch(url, {
+          method: "post",
+          body: formData,
+      })
+      .then(function() {
+        console.log("ok");
+      })
+      .catch((error) => ("Something went wrong!", error));
+    };
+
+    form.addEventListener("submit", handleSubmit);
+
+    function isFileImage(file) {
+      return file && file['type'].split('/')[0] === 'image';
+    }
+
+  </script>
+
+</body>
+</html>
