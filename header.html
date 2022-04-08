@@ -1,0 +1,38 @@
+<header class="py-3 mb-3 border-bottom bg-light">
+  <div class="row text-center">
+    <div class="col-1">
+      <a href="./index.html" class="">
+        <img src="./img/logo-icon.png" width="60" alt="">
+      </a>
+    </div>
+
+    <div class="col-11 row align-items-right">
+      <form class="col-7 p-3">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </form>
+      <div class="col-5 out" id="out_block">
+        <a href="./login.html" class="btn btn-light border m-1">Giriş</a>
+        <a href="./customer_registration.html" class="btn btn-light border m-1">Müştəri qeydiyyatı</a>
+        <a href="./seller_registration.html" class="btn btn-light border m-1">Satıcı qeydiyyatı</a>
+      </div>
+      <div class="col-5" id="in_block">
+        <button type="button" class="btn border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+          <img id="header-profile-image" src="./img/profile-icon.png" class="border rounded-circle" width="60" alt="">
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="./user_profile.html">Profil</a>
+          <a class="dropdown-item" id="product-add" href="./product.html">Məhsullarım</a>
+          <a class="dropdown-item" id="basket" href="./order.html">Sifarişlərim</a>
+          <a class="dropdown-item" id="customer-orders" href="./customer_orders.html">Müştəri Sifarişləri</a>
+          <a class="dropdown-item" href="./basket.html">Səbət</a>
+          <!-- <a class="dropdown-item" href="./product.html">Sevimlilər</a> -->
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" onclick="signOut()">Çıxış</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ 
+<script type="text/javascript" src="./js/login_check.js"></script>
+<script type="text/javascript" src="./js/role_check.js"></script>
